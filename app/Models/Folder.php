@@ -4,12 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Folders extends Model
+class Folder extends Model
 {
     protected $fillable = ['name'];
 
     public function files()
     {
-        return $this->hasMany(Files::class);
+        return $this->hasMany(File::class);
     }
 }
